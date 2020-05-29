@@ -1,0 +1,12 @@
+name = "Hugo KuzmaFesenko.com"
+license = "MIT"
+licenselink = "https://github.com/kuzi-moto/hugo-kuzmafesenko/blob/master/LICENSE"
+description = "The theme to my website, https://kuzmafesenko.com/"
+homepage = "https://github.com/kuzi-moto/hugo-kuzmafesenko"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Kuzma Fesenko"
+  homepage = "https://kuzmafesenko.com/"
