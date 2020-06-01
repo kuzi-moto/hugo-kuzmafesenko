@@ -1,0 +1,9 @@
+{{ if .Type | in site.Params.mainSections }}
+  {{ with .Site.Params.commento }}
+    <script defer
+      src="{{ .url }}/js/commento.js">
+      data-id-root="section"
+    </script>
+    <section id="commento"></section>
+  {{ end }}
+{{ end }} 
