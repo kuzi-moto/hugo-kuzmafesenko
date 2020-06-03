@@ -1,8 +1,9 @@
 {{ define "main" }}
-  <h2>Posts</h2>
-  {{ range first 10 .Data.Pages }}
-    {{ if eq .Type "post" }}
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    {{ end }}
-  {{ end }}
+{{ partial "json-debug.html" .Site.Menus }}
+  <h1>Recent Posts</h1>
+  <ul>
+    {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end}}
+  </ul>
 {{ end }}
