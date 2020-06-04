@@ -1,8 +1,12 @@
 /* Base Styles */
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  min-height: 100vh;
   padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -11,12 +15,20 @@ header {
 
 main {
   margin: auto;
-  max-width: 42rem;
   padding: 1em;
 }
 
 h1 {
   margin-top: 0;
+}
+
+a {
+  display: block;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 42rem;
 }
 
 .container {
