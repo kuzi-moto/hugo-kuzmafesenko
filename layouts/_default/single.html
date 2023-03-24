@@ -1,7 +1,10 @@
 {{ define "main" }}
   <article>
-    <h1>{{ .Title }}</h1>
     {{ .Content }}
   </article>
-  {{- partial "commento.html" . -}}
+
+  {{ if not .Site.IsServer }}
+    {{- partial "commento.html" . -}}
+  {{ end }}
+
 {{ end }}

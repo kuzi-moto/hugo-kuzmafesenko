@@ -26,7 +26,8 @@ h2 {
 
 .primary-nav {
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 2rem;
   padding: 0;
   margin: 0;
 }
@@ -35,6 +36,10 @@ h2 {
   .primary-nav__link:visited {
     color: white;
     text-decoration: none;
+  }
+
+  .primary-nav__title {
+    margin-right: auto;
   }
 
 .site-header {
