@@ -1,9 +1,16 @@
 {{ define "main" }}
-{{ partial "json-debug.html" .Site.Menus }}
-  <h1>Recent Posts</h1>
+  {{ if not .Site.IsServer }}
+    {{ partial "json-debug.html" .Site.Menus }}
+  {{ end }}
+
+  <h1>{{.Title}}</h1>
+
+  {{.Content}}
+  
+  <h2>Recent Posts</h2>
   <ul>
     {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end}}
   </ul>
 {{ end }}
