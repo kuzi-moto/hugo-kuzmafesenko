@@ -1,6 +1,6 @@
-<nav>
+<nav class="wrapper">
   <ul class="primary-nav flex-container">
-    <li class="primary-nav__item primary-nav__title"><a class="primary-nav__link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></li>
+    <li class="primary-nav__item primary-nav__title flex-container"><a class="primary-nav__link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></li>
     {{ range .Site.Menus.main }}
       <li class="primary-nav__item"><a class="primary-nav__link" href="{{ relURL .URL }}">{{ .Name }}</a></li>
     {{ end }}

@@ -1,10 +1,19 @@
 {{ define "main" }}
-  <article>
-    {{ .Content }}
-  </article>
 
-  {{ if not .Site.IsServer }}
-    {{- partial "commento.html" . -}}
-  {{ end }}
+<article>
+
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+
+    {{- if (and (in site.Params.mainSections .Type) ( .Param "Date")) -}}
+      <span>
+        {{- .Param "Date" | time.Format (default "January 2, 2006" site.Params.DateFormat) -}}
+      </span>
+    {{- end }}
+  </header>
+  
+  {{ .Content }}
+
+</article>
 
 {{ end }}

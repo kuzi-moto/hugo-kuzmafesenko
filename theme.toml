@@ -1,9 +1,9 @@
 name = "Hugo KuzmaFesenko.com"
 license = "MIT"
 licenselink = "https://github.com/kuzi-moto/hugo-kuzmafesenko/blob/master/LICENSE"
-description = "The theme to my website, https://kuzmafesenko.com/"
+description = "The theme for Kuzma Fesenko's site, https://kuzmafesenko.com/"
 homepage = "https://github.com/kuzi-moto/hugo-kuzmafesenko"
-tags = []
+tags = ["blog", "professional"]
 features = []
 min_version = "0.41.0"
 

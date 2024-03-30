@@ -1,0 +1,6 @@
+{{ if .Type | in site.Params.mainSections }}
+  {{ with .Site.Params.comments }}
+    <script defer src="{{ .url }}/comentario.js"></script>
+    <comentario-comments></comentario-comments>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<article>
+
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+
+    {{- if (and (in site.Params.mainSections .Type) ( .Param "publishDate")) -}}
+      <span>
+        {{- .Param "publishDate" | time.Format (default "January 2, 2006" site.Params.DateFormat) -}}
+      </span>
+      {{- with .Lastmod }}
+        <span>
+          (Updated: {{ . | time.Format (default "January 2, 2006" site.Params.DateFormat) }})
+        </span>
+      {{ end }}
+    {{- end }}
+  </header>
+  
+  {{ .Content }}
+
+</article>
+
+{{ if not hugo.IsServer }}
+  {{ if site.Params.comments }}
+    {{- partial (printf "comments/%s.html" site.Params.comments.type) . -}}
+  {{ else if site.Params.commentContactForm.enable }}
+  <div class="post-comment-form">
+    <p>{{ site.Params.commentContactForm.message }}</p>
+    {{- partial "contact_form" . -}}
+  </div>
+  {{ end }}
+{{ end }}
+
+{{ end }}

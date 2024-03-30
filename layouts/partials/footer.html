@@ -1,0 +1,8 @@
+<div class="wrapper site-footer__content">
+    <div class="site-footer__social flex-container">
+        {{- partial "social" . -}}
+    </div>
+    <span>{{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ end }}</span>
+    <br />
+    <span>Powered by <a href="https://gohugo.io/">Hugo</a></span>
+</div>

@@ -1,0 +1,5 @@
+{{- range sort .Site.Params.social "weight" }}
+  <a href="{{ .url | safeURL }}" title="{{ .icon }}">
+    {{- partial (printf "svg/%s.svg" .icon ) -}}
+  </a>
+{{- end }}

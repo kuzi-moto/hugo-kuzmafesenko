@@ -1,7 +1,4 @@
 {{ define "main" }}
-  {{ if not .Site.IsServer }}
-    {{ partial "json-debug.html" .Site.Menus }}
-  {{ end }}
 
   <h1>{{.Title}}</h1>
 

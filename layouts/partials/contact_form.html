@@ -1,0 +1,23 @@
+<form class="contact-form flex-container" action="{{ .Site.Params.contactForm.url }}" method="post">
+    <div>
+        <label class="visually-hidden" for="name">Name</label>
+        <input class="contact-form__input" name="name" id="name" type="text" placeholder="Name">
+    </div>
+
+    <div>
+        <label class="visually-hidden" for="email">Email</label>
+        <input class="contact-form__input" name="email" id="email" type="email" placeholder="Email">
+    </div>
+
+    <div>
+        <label class="visually-hidden" for="comment">Comment</label>
+        <textarea class="contact-form__comment contact-form__input" id="comment" name="comment" placeholder="Message *" required></textarea>
+    </div>
+
+    <input name="page" type="hidden" value="{{ .RelPermalink }}">
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+
+</form>
